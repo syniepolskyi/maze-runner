@@ -1,0 +1,28 @@
+.canva {
+    border: 1px solid transparent;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    width: 5px;
+    height: 5px;
+    background-color: gainsboro;
+}
+
+.cell.wall {
+    background-color: black;
+}
+
+.curr {
+    background-color: blue;
+    box-shadow: 0 0 2px 2px blue;
+    z-index: 1;
+}
+
+.last {
+    background-color: yellow;
+    box-shadow: 0 0 5px 5px yellow;
+}
