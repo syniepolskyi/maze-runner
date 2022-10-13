@@ -45,7 +45,6 @@ function pathFinder(maze) {
   ];
   let pid = 0;
   let i = 0;
-  let stop = false;
   const wayfinder = () => {
     document.querySelector(".curr")?.classList.toggle("curr");
     document
@@ -74,14 +73,19 @@ function pathFinder(maze) {
       path.push(next);
       path[path.length - 1].prev = pid;
       path[pid].next = path.length - 1;
+      document
+        .getElementById("_" + path[pid].coords[0] + "_" + path[pid].coords[1])
+        .classList.toggle("path",true);
     });
     if (path[pid].prev < 0 && i > 1) {
-      stop = true;
       return false;
     }
     if (path[pid].next === -1 && path[pid].prev >= 0) {
       pid = path[pid].prev;
       path[pid].next = -1;
+      document
+        .getElementById("_" + path[pid].coords[0] + "_" + path[pid].coords[1])
+        .classList.toggle("path",false);
       i++;
       setTimeout(() => {
         wayfinder();
@@ -92,7 +96,6 @@ function pathFinder(maze) {
       path[path[pid].next].coords[0] === arr.length - 1 &&
       path[path[pid].next].coords[1] === arr.length - 1
     ) {
-      stop = true;
       return true;
     }
     pid = path[pid].next;
