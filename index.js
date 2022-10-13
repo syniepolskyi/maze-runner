@@ -89,7 +89,7 @@ function pathFinder(maze) {
       i++;
       setTimeout(() => {
         wayfinder();
-      }, 10);
+      }, 100);
       return;
     }
     if (
@@ -102,7 +102,7 @@ function pathFinder(maze) {
     i++;
     setTimeout(() => {
       wayfinder();
-    }, 10);
+    }, 100);
   };
 
   setTimeout(() => {
