@@ -30,3 +30,7 @@
 .path {
     background-color: lightgreen;
 }
+
+.centered {
+    text-align: center;   
+}
