@@ -34,3 +34,12 @@
 .centered {
     text-align: center;   
 }
+
+.centered img {
+    width: 100%;
+}
+
+.canva-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+}
